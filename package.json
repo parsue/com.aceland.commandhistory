@@ -1,6 +1,6 @@
 {
   "name": "com.aceland.commandhistory",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "AceLand Command History",
   "description": "AceLand Command History is a Unity WebRequest implement package.\n\nPlease visit our [Git Book](https://aceland-workshop.gitbook.io/aceland-unity-packages).",
   "unity": "2022.3",
@@ -27,7 +27,7 @@
     "registry": "https://package.openupm.com"
   },
   "type": "utility",
-  "documentationUrl": "https://docs.parsue.io/aceland-unity-packages",
-  "licensesUrl": "https://docs.parsue.io/aceland-unity-packages/packages/command-history",
+  "licensesUrl": "https://docs.parsue.io/aceland-unity-packages/getting-started/license",
+  "documentationUrl": "https://docs.parsue.io/aceland-unity-packages/packages/command-history",
   "changelogUrl": "https://docs.parsue.io/aceland-unity-packages/packages/command-history/change-log"
 }
