@@ -1,0 +1,20 @@
+{
+    "name": "AceLand.CommandHistory.Editor",
+    "rootNamespace": "AceLand.CommandHistory",
+    "references": [
+        "GUID:0b6e3ff925df76b408774ed4b623807b",
+        "GUID:9811992f43a01034cbf814ec6fbeeb44",
+        "GUID:81ce281511b07bf48b9b74bf0f082d74"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
