@@ -1,6 +1,6 @@
-﻿{
+{
   "name": "com.aceland.commandhistory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "AceLand Command History",
   "description": "AceLand Command History is a Unity WebRequest implement package.\n\nPlease visit our [Git Book](https://aceland-workshop.gitbook.io/aceland-unity-packages).",
   "unity": "2022.3",
