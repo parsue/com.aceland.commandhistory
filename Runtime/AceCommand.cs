@@ -23,10 +23,11 @@ namespace AceLand.CommandHistory
             History = Core.History.Create();
         }
         
-        public static ICommandBuilder Builder() => CommandHistory.Builder.CommandBuilder.Create();
+        public static ICommandBuilder Builder() => CommandBuilder.Create();
         public static int UndoCount() => History.UndoCount;
         public static int RedoCount() => History.RedoCount;
         public static bool Undo() => History.Undo();
         public static bool Redo() => History.Redo();
+        public static void Clear() => History.Clear();
     }
 }
