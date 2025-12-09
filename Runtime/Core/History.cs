@@ -28,6 +28,7 @@ namespace AceLand.CommandHistory.Core
                 _histories.RemoveFirst();
             
             EventBus.Event<INewHistoryEvent>().WithSender(this).Raise();
+            EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
 
             return true;
         }
@@ -44,6 +45,7 @@ namespace AceLand.CommandHistory.Core
                 _histories.RemoveFirst();
             
             EventBus.Event<INewHistoryEvent>().WithSender(this).Raise();
+            EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
 
             return true;
         }
@@ -59,6 +61,7 @@ namespace AceLand.CommandHistory.Core
             command.Undo();
             
             EventBus.Event<IUndoHistoryEvent>().WithSender(this).Raise();
+            EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
 
             return true;
         }
@@ -78,6 +81,7 @@ namespace AceLand.CommandHistory.Core
             command.Redo();
             
             EventBus.Event<IRedoHistoryEvent>().WithSender(this).Raise();
+            EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
 
             return true;
         }
