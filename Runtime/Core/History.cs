@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using AceLand.CommandHistory.Events;
 using AceLand.CommandHistory.ProjectSetting;
+using AceLand.EventDriven.Bus;
 
 namespace AceLand.CommandHistory.Core
 {
@@ -24,6 +26,8 @@ namespace AceLand.CommandHistory.Core
 
             if (UndoCount > Settings.MaxHistory)
                 _histories.RemoveFirst();
+            
+            EventBus.Event<INewHistoryEvent>().WithSender(this).Raise();
 
             return true;
         }
@@ -38,6 +42,8 @@ namespace AceLand.CommandHistory.Core
 
             if (UndoCount > Settings.MaxHistory)
                 _histories.RemoveFirst();
+            
+            EventBus.Event<INewHistoryEvent>().WithSender(this).Raise();
 
             return true;
         }
@@ -51,6 +57,8 @@ namespace AceLand.CommandHistory.Core
             
             _abandonment.Push(command);
             command.Undo();
+            
+            EventBus.Event<IUndoHistoryEvent>().WithSender(this).Raise();
 
             return true;
         }
@@ -68,6 +76,8 @@ namespace AceLand.CommandHistory.Core
             
             _histories.AddLast(command);
             command.Redo();
+            
+            EventBus.Event<IRedoHistoryEvent>().WithSender(this).Raise();
 
             return true;
         }

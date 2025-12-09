@@ -2,7 +2,8 @@
     "name": "AceLand.CommandHistory",
     "rootNamespace": "AceLand.CommandHistory",
     "references": [
-        "GUID:0b6e3ff925df76b408774ed4b623807b"
+        "GUID:0b6e3ff925df76b408774ed4b623807b",
+        "GUID:afcc6e9dc133dcd49bde72cc59fe0906"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
