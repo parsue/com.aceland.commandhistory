@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.5] - 2025-12-09
+### Added
+- [History] clear history function
+- [Event] add event on clear history
+- [Project Settings] add settings to enable events
+
 ## [1.0.4] - 2025-12-09
 ### Added
 - [Event] raise event on any history change
