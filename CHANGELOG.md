@@ -1,0 +1,17 @@
+﻿# Changelog
+
+All notable changes to this project will be documented in this file.
+
+---
+
+## [1.0.4] - 2025-12-09
+### Added
+- [Event] raise event on any history change
+
+## [1.0.3] - 2025-12-09
+### Added
+- [Event] raise events on new, undo and redo history
+
+## [1.0.2] - 2025-12-08
+First public release. If you have an older version, please update or re-install.   
+For detail please visit and bookmark our [GitBook](https://aceland-workshop.gitbook.io/aceland-unity-packages/)
