@@ -2,9 +2,9 @@
     "name": "AceLand.CommandHistory.Editor",
     "rootNamespace": "AceLand.CommandHistory",
     "references": [
-        "GUID:0b6e3ff925df76b408774ed4b623807b",
-        "GUID:9811992f43a01034cbf814ec6fbeeb44",
-        "GUID:81ce281511b07bf48b9b74bf0f082d74"
+        "GUID:81ce281511b07bf48b9b74bf0f082d74",
+        "GUID:03d7f3b5b2cdbe14dad3ef6460233f6b",
+        "GUID:a9e09994eea96e5439279dbe3783eacc"
     ],
     "includePlatforms": [
         "Editor"
