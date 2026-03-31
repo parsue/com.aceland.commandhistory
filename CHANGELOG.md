@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.2.2] - 2025-03-31
+### Added
+- [API] set max history in range 16 to 512
+
 ## [1.2.1] - 2025-12-21
 ### Modified
 - Dependency version
