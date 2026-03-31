@@ -35,7 +35,7 @@ namespace AceLand.CommandHistory.Core
             _histories.AddLast(command);
             _abandonment.Clear();
 
-            if (UndoCount > Settings.MaxHistory)
+            while (UndoCount > Settings.MaxHistory)
                 _histories.RemoveFirst();
             
             if (Settings.NewHistoryEvents)
@@ -54,7 +54,7 @@ namespace AceLand.CommandHistory.Core
             _abandonment.Clear();
             command.Redo();
 
-            if (UndoCount > Settings.MaxHistory)
+            while (UndoCount > Settings.MaxHistory)
                 _histories.RemoveFirst();
             
             if (Settings.NewHistoryEvents)
