@@ -26,5 +26,7 @@ namespace AceLand.CommandHistory.ProjectSetting
         public bool RedoHistoryEvents => redoHistoryEvents;
         public bool ClearHistoryEvents => clearHistoryEvents;
         public bool HistoryChangeEvents => historyChangeEvents;
+
+        internal void SetMaxHistory(int maxValue) => maxHistory = Mathf.Clamp(maxValue, 16, 512);
     }
 }
