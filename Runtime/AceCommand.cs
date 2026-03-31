@@ -29,5 +29,7 @@ namespace AceLand.CommandHistory
         public static bool Undo() => History.Undo();
         public static bool Redo() => History.Redo();
         public static void Clear() => History.Clear();
+
+        public static void SetMaxHistory(int maxHistory) => ProjectSettings.SetMaxHistory(maxHistory);
     }
 }
