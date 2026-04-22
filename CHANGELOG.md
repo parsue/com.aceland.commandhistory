@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.2.3] - 2025-04-22
+### Modified
+- [Dependency] implement with EventDriven 2.5.0
+
 ## [1.2.2] - 2025-03-31
 ### Added
 - [API] set max history in range 16 to 512
