@@ -4,6 +4,6 @@ namespace AceLand.CommandHistory.Events
 {
     public interface IHistoryChangeEvent : IEvent
     {
-        void OnHistoryChanged(object sender);
+        void OnHistoryChanged();
     }
 }

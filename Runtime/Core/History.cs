@@ -23,9 +23,9 @@ namespace AceLand.CommandHistory.Core
             _abandonment.Clear();
             
             if (Settings.ClearHistoryEvents)
-                EventBus.Event<IClearHistoryEvent>().WithSender(this).Raise();
+                EventBus.Event<IClearHistoryEvent>().Raise();
             if (Settings.HistoryChangeEvents)
-                EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
+                EventBus.Event<IHistoryChangeEvent>().Raise();
         }
 
         public bool Add<T>(T command) where T : ICommand
@@ -39,9 +39,9 @@ namespace AceLand.CommandHistory.Core
                 _histories.RemoveFirst();
             
             if (Settings.NewHistoryEvents)
-                EventBus.Event<INewHistoryEvent>().WithSender(this).Raise();
+                EventBus.Event<INewHistoryEvent>().Raise();
             if (Settings.HistoryChangeEvents)
-                EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
+                EventBus.Event<IHistoryChangeEvent>().Raise();
 
             return true;
         }
@@ -58,9 +58,9 @@ namespace AceLand.CommandHistory.Core
                 _histories.RemoveFirst();
             
             if (Settings.NewHistoryEvents)
-                EventBus.Event<INewHistoryEvent>().WithSender(this).Raise();
+                EventBus.Event<INewHistoryEvent>().Raise();
             if (Settings.HistoryChangeEvents)
-                EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
+                EventBus.Event<IHistoryChangeEvent>().Raise();
 
             return true;
         }
@@ -76,9 +76,9 @@ namespace AceLand.CommandHistory.Core
             command.Undo();
             
             if (Settings.UndoHistoryEvents)
-                EventBus.Event<IUndoHistoryEvent>().WithSender(this).Raise();
+                EventBus.Event<IUndoHistoryEvent>().Raise();
             if (Settings.HistoryChangeEvents)
-                EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
+                EventBus.Event<IHistoryChangeEvent>().Raise();
 
             return true;
         }
@@ -98,9 +98,9 @@ namespace AceLand.CommandHistory.Core
             command.Redo();
             
             if (Settings.RedoHistoryEvents)
-                EventBus.Event<IRedoHistoryEvent>().WithSender(this).Raise();
+                EventBus.Event<IRedoHistoryEvent>().Raise();
             if (Settings.HistoryChangeEvents)
-                EventBus.Event<IHistoryChangeEvent>().WithSender(this).Raise();
+                EventBus.Event<IHistoryChangeEvent>().Raise();
 
             return true;
         }
