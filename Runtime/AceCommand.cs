@@ -1,10 +1,11 @@
 ﻿using AceLand.CommandHistory.Builder;
 using AceLand.CommandHistory.ProjectSetting;
+using Unity.Scripting.LifecycleManagement;
 using UnityEngine;
 
 namespace AceLand.CommandHistory
 {
-    public static class AceCommand
+    public static partial class AceCommand
     {
         internal static CommandHistoryProjectSettings ProjectSettings
         {
@@ -14,8 +15,10 @@ namespace AceLand.CommandHistory
                 return _projectSettings;
             }
         }
+        
+        [AutoStaticsCleanup]
         private static CommandHistoryProjectSettings _projectSettings;
-        internal static Core.History History { get; set; }
+        internal static Core.History History { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void Init()
