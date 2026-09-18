@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [1.2.4] - 2026-9-18
+## [3.0.0] - 2026-9-18
 ### Modified
 - Ready for CoreCLR, auto clearup static values
+
+---
 
 ## [1.2.3] - 2025-04-22
 ### Modified

@@ -1,6 +1,8 @@
 ﻿using AceLand.CommandHistory.Builder;
 using AceLand.CommandHistory.ProjectSetting;
+#if UNITY_6000_5_OR_NEWER
 using Unity.Scripting.LifecycleManagement;
+#endif
 using UnityEngine;
 
 namespace AceLand.CommandHistory
@@ -16,10 +18,20 @@ namespace AceLand.CommandHistory
             }
         }
         
+#if UNITY_6000_5_OR_NEWER
         [AutoStaticsCleanup]
+#endif
         private static CommandHistoryProjectSettings _projectSettings;
         internal static Core.History History { get; private set; }
 
+#if !UNITY_6000_5_OR_NEWER
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+        private static void ClearStatic()
+        {
+            _projectSettings = null;
+        }
+#endif
+        
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void Init()
         {
